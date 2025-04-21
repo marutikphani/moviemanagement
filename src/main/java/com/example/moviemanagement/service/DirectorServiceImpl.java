@@ -1,7 +1,6 @@
 package com.example.moviemanagement.service;
 
 import org.springframework.stereotype.Service;
-import org.springframework.beans.factory.annotation.Autowired;
 import com.example.moviemanagement.repository.DirectorRepository;
 import com.example.moviemanagement.model.Director;
 import java.util.List;
@@ -23,4 +22,10 @@ public class DirectorServiceImpl implements DirectorService {
     public Director addDirector(Director director) {
         return directorRepository.save(director);
     }
+
+    @Override
+    public List<Director> findDirectorsByCountry(String country){
+        return directorRepository.findByCountryIgnoreCase(country);
+    }
 }
+

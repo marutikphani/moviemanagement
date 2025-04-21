@@ -7,4 +7,6 @@ import java.util.List;
 public interface DirectorService {
     List<Director> getAllDirectors();
     Director addDirector(Director director);
+
+    List<Director> findDirectorsByCountry(String country);
 }
