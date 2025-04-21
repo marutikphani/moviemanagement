@@ -28,7 +28,7 @@ public class DirectorController {
     }
 
     @GetMapping("/country/{country}")
-    public List<Director> getDirectorsByCounty(@PathVariable String country){
+    public List<Director> getDirectorsByCountry(@PathVariable String country){
         return directorService.findDirectorsByCountry(country);
     }
 }
