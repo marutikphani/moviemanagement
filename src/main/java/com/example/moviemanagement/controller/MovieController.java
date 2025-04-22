@@ -21,6 +21,12 @@ public class MovieController {
         return movieService.getAllMovies();
     }
 
+    @GetMapping("/ping")
+    public String ping() {
+        return "I'm alive!";
+    }
+
+
     @PostMapping
     public Movie addMovie(@RequestBody Movie movie) {
         return movieService.addMovie(movie);

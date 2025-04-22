@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/directors")
 public class DirectorController {
+
     @Autowired
     private final DirectorService directorService;
 
